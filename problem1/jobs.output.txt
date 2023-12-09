@@ -1,1 +1,3 @@
-Jobs left: 2, Earnings left: 400
+The number of tasks and earnings available for others:
+Tasks: 2
+Earnings: 400

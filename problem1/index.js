@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path')
 
 
 /**
@@ -65,7 +66,6 @@ function jobsLeftForOthers(jobs) {
     let jobsForJohn = determineJobsTaken(jobs);
     let earningsForJohn = jobsForJohn.reduce((acc, job) => acc + job.profit, 0);
     const result = [jobs.length - jobsForJohn.length, totalEarnings - earningsForJohn];
-    writeOutputToFile('jobs.output.txt', result);
     return result;
 }
 
@@ -94,7 +94,11 @@ function readAndProcessFile(filePath) {
         jobs.push(new Job(lines[i], lines[i + 1], lines[i + 2]));
     }
 
-    return jobsLeftForOthers(jobs);
+    const jobsLeft = jobsLeftForOthers(jobs);
+
+    writeOutputToFile(path.dirname(__filename) +'/jobs.output.txt', jobsLeft);
+
+    return jobsLeft
 }
 
 
@@ -104,9 +108,14 @@ function readAndProcessFile(filePath) {
  * @param {number[]} data - The data to be written to the file.
  */
 function writeOutputToFile(filePath, data) {
-    const formattedData = `Jobs left: ${data[0]}, Earnings left: ${data[1]}`;
-    fs.writeFileSync(filePath, formattedData, 'utf8');
+    output = "The number of tasks and earnings available for others:\n"
+    const formattedData = `Tasks: ${data[0]}\nEarnings: ${data[1]}\n`;
+    output += formattedData
+    fs.writeFileSync(filePath, output, 'utf8');
 }
+
+// driver code
+readAndProcessFile(path.dirname(__filename) + '/jobs.input.txt');
 
 module.exports = {
     Job, readAndProcessFile, jobsLeftForOthers, readFile
