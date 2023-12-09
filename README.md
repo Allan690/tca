@@ -18,6 +18,8 @@ node_modules/.bin/jest
 
 ## Run individual files
 
+Ensure to UNCOMMENT the `driver` code in the `index.js` files, then run the following:
+
 ```bash
 node problem1/index.js
 ```

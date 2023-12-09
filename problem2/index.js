@@ -70,8 +70,9 @@ function processGoodiesDistribution(inputFilePath, outputFilePath) {
 }
 
 module.exports = {
-    readInputFile, findGoodiesDistribution, writeOutputToFile 
+    readInputFile, findGoodiesDistribution, writeOutputToFile
 }
 
+// driver code - uncomment before running with node, leave commented when running tests
 // const directory = path.dirname(__filename);
 // processGoodiesDistribution(`${directory}/goodies.input.txt`, `${directory}/goodies.output.txt`);

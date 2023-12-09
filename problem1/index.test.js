@@ -44,7 +44,7 @@ describe('Job Scheduler Tests', () => {
         const mockData = '1\n3\n0900\n1030\n100\n1000\n1200\n500\n1100\n1200\n300';
         fs.readFileSync.mockReturnValue(mockData);
 
-        const filePath = 'test.txt';
+        const filePath = 'jobs.input.txt';
         const data = readFile(filePath);
 
         expect(data).toBe(mockData);

@@ -114,8 +114,8 @@ function writeOutputToFile(filePath, data) {
     fs.writeFileSync(filePath, output, 'utf8');
 }
 
-// driver code
-readAndProcessFile(path.dirname(__filename) + '/jobs.input.txt');
+// driver code - uncomment when running with node, comment or remove this when running tests
+// readAndProcessFile(path.dirname(__filename) + '/jobs.input.txt');
 
 module.exports = {
     Job, readAndProcessFile, jobsLeftForOthers, readFile

@@ -50,7 +50,7 @@ describe('Goodies Distribution', () => {
                 { name: 'Goodie2', price: 200 }
             ];
             const minDiff = 100;
-            const filePath = 'test.txt';
+            const filePath = 'goodies.input.txt';
 
             writeOutputToFile(filePath, chosenGoodies, minDiff);
 
