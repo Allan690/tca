@@ -1,6 +1,7 @@
 # Tushop Coding Assignment
 
 This repo contains problems for the Tushop coding assignment. The solutions for the problems are in index.js files of the `probleml` and `problem2` repositories respectively.
+The screen recording for the execution of this code is on the link here: https://www.loom.com/share/4dce2317135b4be78d0479867155bfc1
 
 ## Running tests
 
