@@ -14,7 +14,7 @@ npm install
 Then run the jest command at the root of the project directory:
 
 ```bash
-node_modules/.bin/jest
+npm run test
 ```
 
 ## Run individual files
